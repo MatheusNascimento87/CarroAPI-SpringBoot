@@ -10,6 +10,7 @@ import java.util.List;
 public interface CarroRepository extends JpaRepository<Carro,Long> {
     public List<Carro> findByModelo(String modelo);
     public List<Carro> findByMarca(Marca marca);
+    //JPQL
     @Query("FROM Carro c WHERE c.ano > :ano")
     public List<Carro> findAcimaAno(Integer ano);
 }
