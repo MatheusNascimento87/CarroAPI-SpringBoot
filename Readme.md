@@ -92,8 +92,8 @@ Cadastra um novo carro.
 "ano": 2022,
 "marca": { "id": 1 },
 "proprietarios": [
-{ "id": 1 },
-{ "id": 2 }
+  { "id": 1 },
+  { "id": 2 }
 ]
 }
    ```
@@ -107,31 +107,31 @@ Remove um carro pelo ID.
 ## 🗃️ Entidades
 ### Carro
 
-``id``: Long
+`id`: Long
 
-``modelo``: String
+`modelo`: String
 
-``ano``: Integer
+`ano`: Integer
 
-``marca``: Marca (ManyToOne)
+`marca`: Marca (ManyToOne)
 
-proprietarios: List<Proprietarios> (ManyToMany)
+`proprietarios`: List<Proprietarios> (ManyToMany)
 
 ### Marca
 
-``id``: Long
+`id`: Long
 
-``nome``: String
+`nome`: String
 
-``carros``: List<Carro> (OneToMany)
+`carros`: List<Carro> (OneToMany)
 
 ### Proprietarios
 
-``id``: Long
+`id`: Long
 
-``nome``: String
+`nome`: String
 
-``idade``: Integer
+`idade`: Integer
 
 ## 💡 Possíveis Melhorias Futuras
 
