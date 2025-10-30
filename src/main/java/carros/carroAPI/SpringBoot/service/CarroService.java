@@ -1,6 +1,7 @@
 package carros.carroAPI.SpringBoot.service;
 
 import carros.carroAPI.SpringBoot.entities.Carro;
+import carros.carroAPI.SpringBoot.entities.Marca;
 import carros.carroAPI.SpringBoot.repository.CarroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,5 +40,16 @@ public class CarroService {
         oldCar.setMarca(newCar.getMarca());
 
         repository.saveAndFlush(oldCar);
+    }
+    public List<Carro> findByModelo(String modelo){
+        return this.repository.findByModelo(modelo);
+    }
+    public List<Carro> findByMarca(long idMarca){
+        Marca marca = new Marca();
+        marca.setId(idMarca);
+        return this.repository.findByMarca(marca);
+    }
+    public List<Carro> findAcimaAno(Integer ano){
+        return this.repository.findAcimaAno(ano);
     }
 }

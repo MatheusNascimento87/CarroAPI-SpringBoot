@@ -41,6 +41,36 @@ public class CarroController {
                     .body("Erro inesperado ao buscar o carro.");
         }
     }
+    @GetMapping("/findByModelo")
+    public ResponseEntity<List<Carro>> findByModelo(@RequestParam String modelo) {
+        try {
+            List<Carro> carros = service.findByModelo(modelo);
+            return ResponseEntity.ok(carros);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
+    }
+    @GetMapping("/findByMarca")
+    public ResponseEntity<List<Carro>> findByMarca(@RequestParam long idMarca) {
+        try {
+            List<Carro> carros = service.findByMarca(idMarca);
+            return ResponseEntity.ok(carros);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
+    }
+    @GetMapping("/findAcimaAno")
+    public ResponseEntity<List<Carro>> findAcimaAno(@RequestParam Integer ano) {
+        try {
+            List<Carro> carros = service.findAcimaAno(ano);
+            return ResponseEntity.ok(carros);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
+    }
 
     @PostMapping("/post")
     public ResponseEntity<?> post(@Valid @RequestBody Carro carro) {

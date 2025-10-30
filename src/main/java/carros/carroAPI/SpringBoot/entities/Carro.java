@@ -2,6 +2,7 @@ package carros.carroAPI.SpringBoot.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class Carro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull(message = "Campo modelo nulo")
+    @NotBlank @NotNull(message = "Campo modelo nulo")
     private String modelo;
     @NotNull(message = "Campo ano nulo")
     private Integer ano;
