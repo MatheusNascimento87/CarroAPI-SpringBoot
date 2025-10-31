@@ -1,12 +1,11 @@
 package carros.carroAPI.SpringBoot.service;
 
 import carros.carroAPI.SpringBoot.entities.Carro;
-import carros.carroAPI.SpringBoot.entities.Marca;
 import carros.carroAPI.SpringBoot.repository.CarroRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class CarroServiceTest {
 
-    @MockBean
+    @MockitoBean
     CarroRepository carroRepository;
 
     @BeforeEach
