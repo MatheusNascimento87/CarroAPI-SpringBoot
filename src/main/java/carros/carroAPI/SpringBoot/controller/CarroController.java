@@ -23,7 +23,7 @@ public class CarroController {
             List<Carro> carros = service.findAll();
             return ResponseEntity.ok(carros);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .build();
         }
     }
@@ -47,7 +47,7 @@ public class CarroController {
             List<Carro> carros = service.findByModelo(modelo);
             return ResponseEntity.ok(carros);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .build();
         }
     }
@@ -57,7 +57,7 @@ public class CarroController {
             List<Carro> carros = service.findByMarca(idMarca);
             return ResponseEntity.ok(carros);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .build();
         }
     }
@@ -67,7 +67,7 @@ public class CarroController {
             List<Carro> carros = service.findAcimaAno(ano);
             return ResponseEntity.ok(carros);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .build();
         }
     }
