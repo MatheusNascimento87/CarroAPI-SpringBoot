@@ -135,14 +135,14 @@ Remove um carro pelo ID.
 
 ## 💡 Possíveis Melhorias Futuras
 
-✅ Implementar testes unitários e de integração com JUnit e Mockito
+- Implementar testes unitários e de integração com JUnit e Mockito
 
-🔒 Adicionar autenticação JWT usando Spring Security
+- Adicionar autenticação JWT usando Spring Security
 
-🌐 Criar um front-end em AngularJS para consumir a API
+- Criar um front-end em AngularJS para consumir a API
 
-☁️ Fazer deploy na AWS
+- Fazer deploy na AWS
 
-🧩 Adicionar Docker para facilitar o deploy e execução
+- Adicionar Docker para facilitar o deploy e execução
 
-📈 Paginação e filtros avançados nos endpoints
+- Paginação e filtros avançados nos endpoints
